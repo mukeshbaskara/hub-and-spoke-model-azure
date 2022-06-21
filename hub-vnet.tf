@@ -16,7 +16,7 @@ module "hub-vnet" {
   subnet_names        = ["subnet1"]
 
   subnet_service_endpoints = {
-    subnet1 = ["Microsoft.Compute"]
+    subnet1 = ["Microsoft.Storage"]
   }
 
   tags = {
