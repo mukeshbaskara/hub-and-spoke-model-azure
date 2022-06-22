@@ -28,7 +28,7 @@ resource "azurerm_application_gateway" "gateway" {
 
   gateway_ip_configuration {
     name      = "my-gateway-ip-configuration"
-    subnet_id = "${module.hub-vnet.subnet_names[0].id}"
+    subnet_id = "${azurerm_subnet.frontend.id}"
   }
 
   frontend_port {
