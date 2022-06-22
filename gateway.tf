@@ -23,7 +23,7 @@ resource "azurerm_application_gateway" "gateway" {
 
   sku {
     name     = "Standard_Small"
-    tier     = "Standard"
+    tier     = "Standard_v2"
     capacity = 2
   }
 
