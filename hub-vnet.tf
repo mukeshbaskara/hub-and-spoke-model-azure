@@ -12,6 +12,7 @@ module "hub-vnet" {
   vnet_name           = "hub-vnet"
   resource_group_name = azurerm_resource_group.rg.name
   address_space       = ["10.0.0.0/16"]
+  subnet_names        = []
   tags = {
     environment = "dev"
     costcenter  = "it"
