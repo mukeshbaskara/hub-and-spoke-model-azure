@@ -6,13 +6,13 @@ resource "azurerm_public_ip" "publicip" {
 }
 
 locals {
-  backend_address_pool_name      = "${module.hub-vnet.name}-beap"
-  frontend_port_name             = "${module.hub-vnet.name}-feport"
-  frontend_ip_configuration_name = "${module.hub-vnet.name}-feip"
-  http_setting_name              = "${module.hub-vnet.name}-be-htst"
-  listener_name                  = "${module.hub-vnet.name}-httplstn"
-  request_routing_rule_name      = "${module.hub-vnet.name}-rqrt"
-  redirect_configuration_name    = "${module.hub-vnet.name}-rdrcfg"
+  backend_address_pool_name      = "${module.hub-vnet.vnet_name}-beap"
+  frontend_port_name             = "${module.hub-vnet.vnet_name}-feport"
+  frontend_ip_configuration_name = "${module.hub-vnet.vnet_name}-feip"
+  http_setting_name              = "${module.hub-vnet.vnet_name}-be-htst"
+  listener_name                  = "${module.hub-vnet.vnet_name}-httplstn"
+  request_routing_rule_name      = "${module.hub-vnet.vnet_name}-rqrt"
+  redirect_configuration_name    = "${module.hub-vnet.vnet_name}-rdrcfg"
 }
 
 resource "azurerm_application_gateway" "gateway" {
