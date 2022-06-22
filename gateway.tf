@@ -3,6 +3,7 @@ resource "azurerm_public_ip" "publicip" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   allocation_method   = "Static"
+  sku                 = "Standard"
 }
 
 locals {
@@ -22,7 +23,7 @@ resource "azurerm_application_gateway" "gateway" {
 
   sku {
     name     = "Standard_Small"
-    tier     = "WAF_v2"
+    tier     = "Standard_V2"
     capacity = 2
   }
 
